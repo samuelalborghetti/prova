@@ -1,0 +1,2825 @@
+{
+    "settimana_corrente": 2,
+    "numero_settimane": 8,
+    "razioni_attuali": {
+        "verdura": 36.5,
+        "frutta": 0,
+        "carne": 32.0,
+        "acqua": 104.25
+    },
+    "merce_attuale": {
+        "medicinali": 20,
+        "armi": 40,
+        "totale": 230
+    },
+    "consumi_base": {
+        "verdura": 0.5,
+        "frutta": 1.0,
+        "carne": 1.0,
+        "acqua": 0.5
+    },
+    "flag_dimezzamento_razioni": {
+        "verdura": false,
+        "frutta": false,
+        "carne": false,
+        "acqua": false
+    },
+    "soldi_rimanenti": 1157.0,
+    "bonus_morale": 0,
+    "albatro_avvistato": 0,
+    "albatro_ucciso": null,
+    "mazzo_eventi": [
+        "UOMO IN MARE",
+        "VERDURA IN MARE",
+        "FRUTTA IN MARE",
+        "CARNE IN MARE",
+        "ACQUA IN MARE",
+        "PESCA MIRACOLOSA",
+        "TEMPESTA MIRACOLOSA",
+        "VENTI FAVOREVOLI",
+        "CATTIVO TEMPO",
+        "ONDATA",
+        "INFESTAZIONE RATTI",
+        "AVVISTAMENTO ALBATRO",
+        "AVVISTAMENTO SCIALUPPA",
+        "EPIDEMIA",
+        "ATTACCO PIRATA",
+        "DANNI AL TIMONE",
+        "RAFFICHE DI VENTO",
+        "AVVISTAMENTO ISOLA",
+        "NESSUN IMPREVISTO",
+        "NESSUN IMPREVISTO",
+        "NESSUN IMPREVISTO",
+        "NESSUN IMPREVISTO",
+        "NESSUN IMPREVISTO",
+        "NESSUN IMPREVISTO"
+    ],
+    "personaggi": [
+        {
+            "name": "Tesoriere",
+            "stats": {
+                "cost": 20,
+                "alive": true,
+                "morale": 100
+            },
+            "pos": {
+                "scelta_equip": {
+                    "x": 108,
+                    "y": 432,
+                    "x_fine": 648,
+                    "y_fine": 315
+                },
+                "main": {
+                    "x_attuale": 165,
+                    "y_attuale": 330
+                }
+            },
+            "info": {
+                "name": "Tesoriere",
+                "descrizione": "Esperto di affari e commerci. Sa come ottenere il massimo dalle trattative.",
+                "abilita": "Aumenta l'efficacia del baratto nel nuovo mondo.",
+                "ruolo": "tesoriere"
+            }
+        },
+        {
+            "name": "Bardo",
+            "stats": {
+                "cost": 10,
+                "alive": true,
+                "morale": 100
+            },
+            "pos": {
+                "scelta_equip": {
+                    "x": 108,
+                    "y": 432,
+                    "x_fine": 648,
+                    "y_fine": 315
+                },
+                "main": {
+                    "x_attuale": 70,
+                    "y_attuale": 340
+                }
+            },
+            "info": {
+                "name": "Bardo",
+                "descrizione": "Intrattiene l'equipaggio con musica e storie. Sostiene il morale.",
+                "abilita": "Riduce il consumo di morale durante le tempeste.",
+                "ruolo": "bardo"
+            }
+        },
+        {
+            "name": "Meccanico",
+            "stats": {
+                "cost": 15,
+                "alive": true,
+                "morale": 100
+            },
+            "pos": {
+                "scelta_equip": {
+                    "x": 108,
+                    "y": 432,
+                    "x_fine": 648,
+                    "y_fine": 315
+                },
+                "main": {
+                    "x_attuale": 23,
+                    "y_attuale": 365
+                }
+            },
+            "info": {
+                "name": "Meccanico",
+                "descrizione": "Esperto nella riparazione della nave. Gestisce i danni al timone.",
+                "abilita": "Danni al timone: solo +1 settimana invece di 2-4.",
+                "ruolo": "meccanico"
+            }
+        },
+        {
+            "name": "Medico",
+            "stats": {
+                "cost": 25,
+                "alive": true,
+                "morale": 100
+            },
+            "pos": {
+                "scelta_equip": {
+                    "x": 108,
+                    "y": 432,
+                    "x_fine": 648,
+                    "y_fine": 315
+                },
+                "main": {
+                    "x_attuale": 455,
+                    "y_attuale": 420
+                }
+            },
+            "info": {
+                "name": "Medico",
+                "descrizione": "Curatore dell'equipaggio. Può salvare vite durante le epidemie.",
+                "abilita": "Epidemia: cura i malati usando 1 medicinale per persona.",
+                "ruolo": "medico"
+            }
+        },
+        {
+            "name": "Capitano",
+            "stats": {
+                "cost": 20,
+                "alive": true,
+                "morale": 100
+            },
+            "pos": {
+                "scelta_equip": {
+                    "x": 108,
+                    "y": 432,
+                    "x_fine": 648,
+                    "y_fine": 315
+                },
+                "main": {
+                    "x_attuale": 400,
+                    "y_attuale": 420
+                }
+            },
+            "info": {
+                "name": "Capitano",
+                "descrizione": "Il leader della spedizione. La sua presenza garantisce stabilità e disciplina.",
+                "abilita": "Bonus al morale generale. Se muore, il morale crolla drasticamente.",
+                "ruolo": "capitano"
+            }
+        },
+        {
+            "name": "Cuoco",
+            "stats": {
+                "cost": 15,
+                "alive": true,
+                "morale": 100
+            },
+            "pos": {
+                "scelta_equip": {
+                    "x": 108,
+                    "y": 432,
+                    "x_fine": 648,
+                    "y_fine": 315
+                },
+                "main": {
+                    "x_attuale": 550,
+                    "y_attuale": 430
+                }
+            },
+            "info": {
+                "name": "Cuoco",
+                "descrizione": "Specializzato nella preparazione del cibo. Senza di lui il morale cala.",
+                "abilita": "Senza cuoco: +30 punti ammutinamento ogni settimana.",
+                "ruolo": "cuoco"
+            }
+        },
+        {
+            "name": "Marinaio",
+            "stats": {
+                "cost": 10,
+                "alive": true,
+                "morale": 100
+            },
+            "pos": {
+                "scelta_equip": {
+                    "x": 108,
+                    "y": 432,
+                    "x_fine": 648,
+                    "y_fine": 315
+                },
+                "main": {
+                    "x_attuale": 500,
+                    "y_attuale": 430
+                }
+            },
+            "info": {
+                "name": "Marinaio",
+                "descrizione": "Forza lavoro base della nave. Necessario per le manovre.",
+                "abilita": "Più marinai = più difensori contro i pirati.",
+                "ruolo": "marinaio"
+            }
+        },
+        {
+            "name": "Navigatore",
+            "stats": {
+                "cost": 20,
+                "alive": true,
+                "morale": 100
+            },
+            "pos": {
+                "scelta_equip": {
+                    "x": 108,
+                    "y": 432,
+                    "x_fine": 648,
+                    "y_fine": 315
+                },
+                "main": {
+                    "x_attuale": 600,
+                    "y_attuale": 480
+                }
+            },
+            "info": {
+                "name": "Navigatore",
+                "descrizione": "Sa leggere le stelle e le mappe. Con lui le rotte sono più sicure.",
+                "abilita": "Raffiche di vento: solo +1 settimana invece di 2-4. Ritorno: isola a 1 sett invece di 2.",
+                "ruolo": "navigatore"
+            }
+        },
+        {
+            "name": "Capitano",
+            "stats": {
+                "cost": 20,
+                "alive": true,
+                "morale": 100
+            },
+            "pos": {
+                "scelta_equip": {
+                    "x": 108,
+                    "y": 432,
+                    "x_fine": 648,
+                    "y_fine": 315
+                },
+                "main": {
+                    "x_attuale": 400,
+                    "y_attuale": 480
+                }
+            },
+            "info": {
+                "name": "Capitano",
+                "descrizione": "Il leader della spedizione. La sua presenza garantisce stabilità e disciplina.",
+                "abilita": "Bonus al morale generale. Se muore, il morale crolla drasticamente.",
+                "ruolo": "capitano"
+            }
+        }
+    ],
+    "lista_merci": [
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "armi",
+            "info": {
+                "name": "armi",
+                "descrizione": "Arma - 1 pezzo (5 monete). Difende dai pirati. NON barattabile."
+            },
+            "stats": {
+                "cost": 5.0,
+                "tipo": "arma"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "medicinale",
+            "info": {
+                "name": "medicinale",
+                "descrizione": "Medicinale - 1 bottiglia (1 moneta). Cura 1 malato durante l'epidemia."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "medicinale"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "sale",
+            "info": {
+                "name": "sale",
+                "descrizione": "Sale - 1 sacco (0.5 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 0.5,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "stoffa",
+            "info": {
+                "name": "stoffa",
+                "descrizione": "Stoffa - 1 telo (2 monete). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 2.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        },
+        {
+            "name": "diamanti",
+            "info": {
+                "name": "diamanti",
+                "descrizione": "Diamante - 1 pezzo (1 moneta). Barattabile nel nuovo mondo."
+            },
+            "stats": {
+                "cost": 1.0,
+                "tipo": "baratto"
+            }
+        }
+    ]
+}
